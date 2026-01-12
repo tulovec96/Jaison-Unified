@@ -1,0 +1,182 @@
+# =============================================================================
+# PROJECT J.A.I.SON - .gitignore
+# =============================================================================
+
+# ============ Custom JAIson Files ============
+ffmpeg
+ffmpeg.exe
+ffprobe
+ffprobe.exe
+*.7z
+model-downloads/
+
+# ============ Environment & Secrets ============
+.env
+.env.*
+.env.local
+.env.*.local
+.env-template
+.env.production
+.env.staging
+secrets/
+*.key
+*.pem
+
+# ============ Configuration ============
+config.yaml
+configs/*.yaml
+!configs/example.yaml
+
+# ============ Python ============
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+*.whl
+.installed.cfg
+MANIFEST
+
+# ============ Python Build & Packaging ============
+build/
+dist/
+sdist/
+wheels/
+.eggs/
+eggs/
+parts/
+var/
+develop-eggs/
+
+# ============ Virtual Environments ============
+venv/
+env/
+ENV/
+.venv/
+env.bak/
+venv.bak/
+
+# ============ Testing & Coverage ============
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+nosetests.xml
+*.cover
+.tox/
+.nox/
+.pytest_cache/
+.hypothesis/
+.benchmarks/
+
+# ============ Jupyter / IPython ============
+.ipynb_checkpoints/
+*.ipynb
+profile_default/
+ipython_config.py
+
+# ============ Logs & Temp ============
+logs/
+*.log
+*.log.*
+tmp/
+temp/
+.cache/
+*.tmp
+
+# ============ IDE / Editor ============
+.vscode/
+.idea/
+.settings/
+*.code-workspace
+*.iml
+*.ipr
+*.iws
+
+# Vim / Emacs / Sublime
+*.swp
+*.swo
+*~
+.#*
+*.sublime-project
+*.sublime-workspace
+
+# ============ OS ============
+.DS_Store
+Thumbs.db
+ehthumbs.db
+.Spotlight-V100
+.Trashes
+._*
+
+# ============ Node.js / Frontend ============
+node_modules/
+dist/
+build/
+.svelte-kit/
+.vite/
+.parcel-cache/
+.next/
+out/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Frontend source maps & caches
+*.map
+*.tsbuildinfo
+
+# ============ Databases ============
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+
+# ============ Models & Large ML Files ============
+models/**/*.bin
+models/**/*.pth
+models/**/*.zip
+models/**/*.ckpt
+models/**/*.onnx
+
+*.pickle
+*.pkl
+*.h5
+*.hdf5
+
+# ============ Audio / Output ============
+output/
+*.wav
+*.mp3
+*.m4a
+*.flac
+
+# ============ CI / Backup ============
+.github/workflows/*.bak
+.gitlab-ci.yml.bak
+
+# ============ Package Managers ============
+poetry.lock
+Pipfile.lock
+pdm.lock
+.pdm-python
+.pdm-build/
+
+# ============ Lint / Type Check ============
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+cython_debug/
+
+# ============ Backup / Junk ============
+*.bak
+*.backup
+.editorconfig.bak
+.flake8.bak
+.pylintrc.bak
+pyproject.toml.bak
+setup.cfg.bak

@@ -1,0 +1,21 @@
+# VTube Studio Integration Requirements
+# Python 3.14.2 Required
+# Updated: January 11, 2026
+
+# Configuration & Environment
+python-dotenv>=1.0.1
+pyyaml>=6.0.2
+
+# Async WebSocket Communication
+websockets>=14.1
+
+# Networking & HTTP
+requests>=2.32.3
+urllib3>=2.3.0
+
+# JSON Processing
+orjson>=3.10.12
+
+# Utilities
+loguru>=0.7.3
+colorama>=0.4.6

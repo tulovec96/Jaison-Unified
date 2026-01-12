@@ -1,0 +1,34 @@
+# Twitch Integration Requirements
+# Python 3.14.2 Required
+# Updated: January 11, 2026
+
+# Async WebSocket Communication
+websockets>=14.1
+
+# Web Framework (for OAuth)
+Flask>=3.1.0
+Werkzeug>=3.1.3
+Jinja2>=3.1.6
+
+# Configuration & Environment
+python-dotenv>=1.0.1
+pyyaml>=6.0.2
+
+# Networking & HTTP
+requests>=2.32.3
+urllib3>=2.3.0
+
+# Scheduling
+apscheduler>=3.11.0
+
+# Data Processing
+python-dateutil>=2.9.0.post0
+numpy>=2.2.0
+pandas>=2.2.3
+
+# JSON Processing
+orjson>=3.10.12
+
+# Utilities
+loguru>=0.7.3
+colorama>=0.4.6

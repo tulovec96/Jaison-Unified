@@ -1,0 +1,188 @@
+# JAIson Unified Configuration Template
+# Copy this file to config.yaml and customize for your setup
+
+# ============================================================================
+# CORE SERVER CONFIGURATION
+# ============================================================================
+
+# Server host and port
+server:
+  host: "127.0.0.1"
+  port: 7272
+
+# ============================================================================
+# AI MODEL CONFIGURATION
+# ============================================================================
+
+ai:
+  # Model type: gpt-4, gpt-3.5-turbo, local, etc.
+  model: "gpt-3.5-turbo"
+  
+  # OpenAI API key (if using OpenAI models)
+  api_key: ""
+  
+  # Model temperature (0.0 - 1.0)
+  temperature: 0.7
+
+# ============================================================================
+# TEXT-TO-SPEECH CONFIGURATION
+# ============================================================================
+
+tts:
+  # TTS Engine: azure, google, pyttsx3, melotts, fish-audio
+  engine: "pyttsx3"
+  
+  # Azure Speech settings (if using Azure)
+  azure:
+    key: ""
+    region: ""
+    language: "en-US"
+    voice_name: "en-US-AriaNeural"
+
+# ============================================================================
+# SPEECH-TO-TEXT CONFIGURATION
+# ============================================================================
+
+stt:
+  # STT Engine: azure, google, whisper
+  engine: "whisper"
+  
+  # Language code (e.g., "en", "en-US")
+  language: "en-US"
+
+# ============================================================================
+# PERSONALITY & PROMPTS
+# ============================================================================
+
+personality:
+  # Path to character prompt (relative to prompts/characters/)
+  character: "example.txt"
+  
+  # Path to system instructions (relative to prompts/instructions/)
+  instructions: "example.txt"
+  
+  # Path to scene context (relative to prompts/scenes/)
+  scene: "example.txt"
+  
+  # Default greeting message
+  greeting: "Hello! How can I help you today?"
+
+# ============================================================================
+# AUDIO CONFIGURATION
+# ============================================================================
+
+audio:
+  # Audio sample rate (Hz)
+  sample_rate: 16000
+  
+  # Audio channels (1 = mono, 2 = stereo)
+  channels: 1
+  
+  # Output audio format: wav, mp3, ogg
+  format: "wav"
+  
+  # Enable/disable audio processing
+  processing:
+    enabled: true
+    noise_suppression: true
+    echo_cancellation: true
+
+# ============================================================================
+# APPLICATIONS CONFIGURATION
+# ============================================================================
+
+applications:
+  
+  # Discord Bot Configuration
+  discord:
+    enabled: true
+    # Config path relative to apps/discord/
+    config: "config.yaml"
+    # Auto-start with core server
+    auto_start: false
+  
+  # Twitch Integration Configuration
+  twitch:
+    enabled: true
+    # Config path relative to apps/twitch/
+    config: "config.yaml"
+    # Auto-start with core server
+    auto_start: false
+  
+  # VTube Studio Integration Configuration
+  vts:
+    enabled: true
+    # Config path relative to apps/vts/
+    config: "config.yaml"
+    # Auto-start with core server
+    auto_start: false
+
+# ============================================================================
+# LOGGING
+# ============================================================================
+
+logging:
+  # Log level: DEBUG, INFO, WARNING, ERROR, CRITICAL
+  level: "INFO"
+  
+  # Log to console
+  console: true
+  
+  # Log to file (logs/ directory)
+  file: true
+  
+  # Log file rotation size (MB)
+  max_size: 10
+  
+  # Keep N backup log files
+  backup_count: 5
+
+# ============================================================================
+# MCP (Model Context Protocol)
+# ============================================================================
+
+mcp:
+  enabled: false
+  # MCP server configuration
+  servers: []
+
+# ============================================================================
+# API CONFIGURATION
+# ============================================================================
+
+api:
+  # Enable REST API
+  rest: true
+  
+  # Enable WebSocket API
+  websocket: true
+  
+  # API documentation
+  docs: true
+  
+  # CORS settings
+  cors:
+    enabled: true
+    origins: ["*"]
+
+# ============================================================================
+# NOTES FOR APPLICATIONS
+# ============================================================================
+
+# DISCORD BOT:
+# 1. Set up a Discord bot at https://discord.com/developers/applications
+# 2. Create .env file in apps/discord/ with your bot token
+# 3. Ensure bot has Administrator permissions
+# 4. Edit apps/discord/config.yaml with your settings
+
+# TWITCH INTEGRATION:
+# 1. Create Twitch application at https://dev.twitch.tv/console
+# 2. Create .env file in apps/twitch/ with Client ID and Secret
+# 3. Run: python apps/twitch/src/auth.py
+# 4. Edit apps/twitch/config.yaml with your Twitch IDs and settings
+
+# VTUBESHOW INTEGRATION:
+# 1. Install VTube Studio from https://denchisoft.com/
+# 2. Enable Plugins API in VTS Settings → General Settings & External Connections
+# 3. Edit apps/vts/config.yaml with correct VTS WebSocket URL
+# 4. Create custom VTS hotkey config in apps/vts/vts_hotkeys/
